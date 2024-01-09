@@ -1,1 +1,1 @@
-# Git_aducation
+# Git_education
