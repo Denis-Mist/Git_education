@@ -1,0 +1,370 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+body{
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 16px;
+}
+
+.main__title{
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content-item{
+    display: none ;
+}
+
+.content-item.content-item__active{
+    display: inline-block;
+}
+
+.container{
+    padding: 0 10px;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.header{
+    min-height: 100vh;
+}
+
+.header_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.menu_list{
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    font-weight: 700;
+}
+
+.menu_btn{
+    padding: 10px 58px;
+    background-color: black;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header_content_images{
+    text-align: center;
+    padding-bottom: 50px;
+    /*position: relative;*/
+}
+
+.header_content_images::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.header_content_images:has(.color--blue.content-item__active)::before{
+    background: linear-gradient(180deg, #CADBEB,
+    rgba(235,235,235,0.00) 100%);
+}
+.header_content_images:has(.color--pink.content-item__active)::before{
+    background: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0.00) 100%);
+}
+.header_content_images:has(.color--green.content-item__active)::before{
+    background: linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0.00) 100%);
+}
+.header_content_images:has(.color--black.content-item__active)::before{
+    background: linear-gradient(180deg, #B6B6B6 0%, rgba(235, 235, 235, 0.00) 100%);
+}
+.header_content_images:has(.color--white.content-item__active)::before{
+    background: linear-gradient(180deg, #FAFAFA 0%, rgba(235, 235, 235, 0.00) 100%);
+}
+
+.title{
+    font-size: 180px;
+    font-weight: 700;
+    position: absolute;
+}
+.title--air{
+    display: inline-block;
+    transform: translate(81px,80px);
+}
+.title--pod{
+    display: inline-block;
+    transform: translate(74px,80px);
+    position: relative;
+    z-index: -1;
+}
+.title--s{
+    display: inline-block;
+    transform: translate(165px, 132px);
+}
+.title--m{
+    display: inline-block;
+    transform: translate(129px,390px);
+}
+
+.title--ax{
+    display: inline-block;
+    transform: translate(68px, 547px);
+    position: relative;
+    z-index: -1;
+}
+
+.choose-color{
+    padding: 45px 0 180px;
+    text-align: center;
+}
+.choose-color__title{
+    font-size: 36px;
+    font-weight: 700;
+    max-width: 555px;
+    margin: 0 auto 20px;
+}
+
+.choose-color__text{
+    max-width: 555px;
+    margin: 0 auto 80px;
+}
+
+.choose-color__list{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.choose_color-btn{
+    border-radius: 20px;
+    border: 1px solid #777;
+    padding: 50px 55px;
+}
+
+.choose__color-btn--active{
+    display: none;
+}
+
+.composition{
+    margin-bottom: 180px;
+}
+
+.composition__title{
+    text-align: center;
+    font-size: 64px;
+}
+
+.composition__text{
+    text-align: center;
+    max-width: 655px;
+    margin: 0 auto 40px;
+}
+
+.composition__inner{
+    max-width: 625px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.composition__inner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.composition__inner-text p{
+    width: 230px;
+}
+
+.case{
+    background-color: #fafafa;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.case_text{
+    max-width: 825px;
+    margin: 0 auto 40px;
+}
+
+.energy__title{
+    padding-top: 160px;
+    margin-bottom: 40px;
+}
+
+.energy__num{
+    font-size: 210px;
+    font-weight: 700;
+}
+
+.energy__text{
+    max-width: 400px;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+
+
+.audio{
+    position: relative;
+}
+
+.audio::before{
+    content: '';
+    background-image: url(images/audio-bg.jpg);
+    background-repeat: no-repeat;
+    /*height: 1845px;*/
+    /*width: 1920px;*/
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.audio::after{
+    content: '';
+    position: absolute;
+    background-image: url(images/sound.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    bottom: -250px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 150vh;
+    z-index: -1;
+
+}
+
+.audio__inner{
+    min-height: 200vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.audio__box{
+    text-align: center;
+    padding-bottom:50vh;
+}
+
+.audio__text{
+    width: 300px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 58px;
+    align-content: center;
+    margin-top: 10px;
+}
+
+
+.footer{
+    padding: 250px 0 40px;
+    background-color: black;
+    width: 101%;
+    position: relative;
+    z-index: -2;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+
+    /*width: 1583px;*/
+    /*border: 6px solid slateblue;*/
+}
+
+.footer__text{
+    padding: 20px 0;
+}
+
+.footer__list{
+    padding-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+}
+
+@media (max-width: 1200px) {
+    .choose-color__list{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 760px){
+    .choose-color{
+        padding-bottom: 60px;
+    }
+    .choose-color__list{
+        gap: 16px;
+    }
+    .main__title{
+        font-size: 36px;
+    }
+    .composition{
+        margin-bottom: 60px;
+    }
+    .case{
+        padding: 60px 0;
+    }
+    .energy__title{
+        padding-top: 60px;
+        margin-bottom: 20px;
+    }
+    .energy__num{
+        font-size: 110px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
